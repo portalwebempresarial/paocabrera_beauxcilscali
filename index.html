@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pao Cabrera | Beaux Cils Cali</title>
+    <title>Catálogo | Pao Cabrera Beaux Cils Cali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -13,10 +13,11 @@
                     colors: {
                         gold: {
                             400: '#F1C40F',
-                            500: '#D4AF37', // Dorado clásico
+                            500: '#D4AF37',
                             600: '#AA8C2C',
                         },
                         dark: '#0a0a0a',
+                        card: '#111111'
                     }
                 }
             }
@@ -42,10 +43,6 @@
             color: transparent;
         }
 
-        .gold-border {
-            border: 1px solid #D4AF37;
-        }
-
         .btn-gold {
             background: linear-gradient(to right, #D4AF37, #AA8C2C);
             color: white;
@@ -58,7 +55,6 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* Efecto hover en las tarjetas de servicio */
         .service-card {
             transition: all 0.3s ease;
         }
@@ -70,161 +66,313 @@
         .service-card:hover img {
             transform: scale(1.05);
         }
+
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-gold-500 selection:text-white">
 
-    <!-- Navegación -->
+    <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur border-b border-gold-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <span class="font-serif text-2xl gold-gradient-text font-bold">PAO CABRERA</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm">Inicio</a>
-                    <a href="#catalogo" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm">Catálogo</a>
-                </div>
-                <div class="flex items-center">
-                    <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" class="btn-gold px-6 py-2 rounded-full uppercase tracking-wider text-sm font-semibold flex items-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Reservar
-                    </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#pestanas" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-xs font-semibold">Pestañas</a>
+                    <a href="#cejas" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-xs font-semibold">Cejas</a>
+                    <a href="#labios" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-xs font-semibold">Labios</a>
+                    <a href="#cera" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-xs font-semibold">Cera</a>
+                    <a href="#limpieza" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-xs font-semibold">Limpieza</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden border-b border-gold-500/20">
         <div class="absolute inset-0 z-0 opacity-40">
-            <!-- Puedes poner una imagen de fondo general de tu local o de tu trabajo aquí -->
-            <img src="https://images.unsplash.com/photo-1600869009498-8d429f88d4f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Studio" class="w-full h-full object-cover">
+            <img src="watermarked_img_6403508104839598606.jpg" onerror="this.src='https://images.unsplash.com/photo-1600869009498-8d429f88d4f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'" alt="Studio" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-gold-500 tracking-[0.3em] uppercase text-sm font-semibold mb-4">Beaux Cils Cali</h2>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-white leading-tight">
-                Realza tu belleza <br>
-                <span class="gold-gradient-text">natural</span>
+                Catálogo de <br>
+                <span class="gold-gradient-text">Servicios</span>
             </h1>
             <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
-                Especialistas en la mirada y cuidado facial. Descubre nuestro catálogo exclusivo y reserva tu espacio.
+                Selecciona tu servicio ideal y agenda directamente por WhatsApp.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#catalogo" class="btn-gold px-8 py-4 rounded-full uppercase tracking-wider text-sm font-bold">
-                    Ver Catálogo
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Sección Catálogo de Servicios -->
-    <section id="catalogo" class="py-20 bg-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Nuestro <span class="gold-gradient-text">Catálogo</span></h2>
-                <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
-                <p class="mt-4 text-gray-400">Selecciona el servicio y agenda tu cita directamente</p>
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
+        <!-- SECCIÓN PESTAÑAS -->
+        <div id="pestanas" class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 border-l-4 border-gold-500 pl-4">Pestañas</h2>
+            <p class="text-gray-400 mb-8 pl-5">Realza tu mirada con nuestras técnicas especializadas.</p>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- 1. Pestañas -->
-                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
-                    <div class="relative h-64 overflow-hidden">
-                        <!-- RUTA DE TU IMAGEN: Cambia src por "Pestañas/nombre-de-tu-foto.jpg" -->
-                        <img src="Pestañas/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1512496015851-a1cbfc38a0f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Pestañas" class="w-full h-full object-cover transition-transform duration-700">
-                        <div class="absolute top-4 right-4 bg-black/70 backdrop-blur text-gold-500 px-3 py-1 rounded-full text-sm border border-gold-500/50">
-                            Más solicitado
-                        </div>
+                <!-- Clásicas -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Pestañas/Clásicas $65 - retoque $40.jpg" alt="Pestañas Clásicas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$65</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Pestañas</h3>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">Extensiones de pestañas pelo a pelo, volumen ruso y lifting para una mirada de impacto.</p>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Pestañas" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
-                            Reservar Pestañas
-                        </a>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Pestañas Clásicas</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Retoque: <span class="text-gold-500 font-semibold">$40</span></p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Pestañas%20Clásicas%20($65)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
                     </div>
                 </div>
 
-                <!-- 2. Cejas -->
-                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
-                    <div class="relative h-64 overflow-hidden">
-                        <!-- RUTA DE TU IMAGEN: Cambia src por "Cejas/nombre-de-tu-foto.jpg" -->
-                        <img src="Cejas/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1512495962227-2c1c73ec8bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Cejas" class="w-full h-full object-cover transition-transform duration-700">
+                <!-- Híbridas -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Pestañas/Híbridas $75 retoque 50$.jpg" alt="Pestañas Híbridas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$75</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Cejas</h3>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">Diseño, perfilado, sombreado y laminado de cejas. Enmarca tu rostro con perfección.</p>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Cejas" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
-                            Reservar Cejas
-                        </a>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Pestañas Híbridas</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Retoque: <span class="text-gold-500 font-semibold">$50</span></p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Pestañas%20Híbridas%20($75)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
                     </div>
                 </div>
 
-                <!-- 3. Limpieza Facial -->
-                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
-                    <div class="relative h-64 overflow-hidden">
-                        <!-- RUTA DE TU IMAGEN: Cambia src por "Limpieza facial $130/nombre-de-tu-foto.jpg" -->
-                        <img src="Limpieza facial $130/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Limpieza Facial" class="w-full h-full object-cover transition-transform duration-700">
-                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">
-                            $130.000
-                        </div>
+                <!-- Lifting -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Pestañas/Linfting de pestañas $55_.jpg" alt="Lifting de pestañas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$55</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Limpieza Facial</h3>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">Tratamiento profundo para revitalizar tu piel, eliminar impurezas y recuperar la luminosidad.</p>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20la%20Limpieza%20Facial%20de%20$130" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
-                            Reservar Limpieza
-                        </a>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Lifting de Pestañas</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Curvatura natural y perfecta.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Lifting%20de%20Pestañas%20($55)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
                     </div>
                 </div>
 
-                <!-- 4. Labios -->
-                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
-                    <div class="relative h-64 overflow-hidden">
-                        <!-- RUTA DE TU IMAGEN: Cambia src por "Labios/nombre-de-tu-foto.jpg" -->
-                        <img src="Labios/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1596704017254-9b121068fb31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Labios" class="w-full h-full object-cover transition-transform duration-700">
+                <!-- Volumen 3D -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Pestañas/Volumen 3D $75 retoque $50_.jpg" alt="Volumen 3D" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$75</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Labios</h3>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">Micropigmentación, neutralización e hidratación profunda para unos labios perfectos.</p>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20para%20Labios" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
-                            Reservar Labios
-                        </a>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Volumen 3D</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Retoque: <span class="text-gold-500 font-semibold">$50</span></p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Volumen%203D%20($75)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
                     </div>
                 </div>
 
-                <!-- 5. Cera -->
-                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
-                    <div class="relative h-64 overflow-hidden">
-                        <!-- RUTA DE TU IMAGEN: Cambia src por "Cera/nombre-de-tu-foto.jpg" -->
-                        <img src="Cera/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1559553156-2e97137af16f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Cera" class="w-full h-full object-cover transition-transform duration-700">
+                <!-- Volumen 4D -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Pestañas/Volumen 4D $85 retoque $55_.jpg" alt="Volumen 4D" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$85</div>
                     </div>
                     <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Cera</h3>
-                        <p class="text-gray-400 text-sm mb-6 flex-grow">Depilación con cera profesional, cuidado delicado para una piel suave y sin vello.</p>
-                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Depilación%20con%20Cera" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
-                            Reservar Cera
-                        </a>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Volumen 4D</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Retoque: <span class="text-gold-500 font-semibold">$55</span></p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Volumen%204D%20($85)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
+
+        <!-- SECCIÓN CEJAS -->
+        <div id="cejas" class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 border-l-4 border-gold-500 pl-4">Cejas</h2>
+            <p class="text-gray-400 mb-8 pl-5">Enmarca tu rostro con el diseño perfecto.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Henna -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Cejas/Cejas henna $30_.jpg" alt="Cejas en Henna" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$30</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Cejas con Henna</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Sombreado temporal y diseño perfecto.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cejas%20con%20Henna%20($30)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- Micropigmentadas -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Cejas/Cejas micropigmentadas $250 (2 sesiones).jpg" alt="Cejas Micropigmentadas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$250</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Cejas Micropigmentadas</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow"><span class="text-gold-500 font-semibold">Incluye 2 sesiones.</span> Resultados duraderos.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cejas%20Micropigmentadas%20($250)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN LABIOS -->
+        <div id="labios" class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 border-l-4 border-gold-500 pl-4">Labios</h2>
+            <p class="text-gray-400 mb-8 pl-5">Hidratación y color para unos labios irresistibles.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hidra Lips -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Labios/Hidra lips $50_.jpg" alt="Hidra Lips" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$50</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Hidra Lips</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Hidratación profunda y rejuvenecimiento.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Hidra%20Lips%20($50)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- Micropigmentación -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Labios/Micropigmentacion de labios $250 (2 sesiones).jpg" alt="Micropigmentación de Labios" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$250</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Micropigmentación</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow"><span class="text-gold-500 font-semibold">Incluye 2 sesiones.</span> Color permanente y natural.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Micropigmentación%20de%20Labios%20($250)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CERA -->
+        <div id="cera" class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 border-l-4 border-gold-500 pl-4">Depilación con Cera</h2>
+            <p class="text-gray-400 mb-8 pl-5">Piel suave y libre de vello.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cera Axilas -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="Cera/Cera axilas $12.jpg" alt="Cera Axilas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$12</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-serif font-bold text-white mb-4 flex-grow">Cera Axilas</h3>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cera%20Axilas%20($12)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-2.5 rounded-lg uppercase tracking-wider text-xs font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- Cera Bozo -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="Cera/Cera bozo $8.jpg" alt="Cera Bozo" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$8</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-serif font-bold text-white mb-4 flex-grow">Cera Bozo</h3>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cera%20Bozo%20($8)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-2.5 rounded-lg uppercase tracking-wider text-xs font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- Cera Cejas -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="Cera/Cera cejas $12_.jpg" alt="Cera Cejas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$12</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-serif font-bold text-white mb-4 flex-grow">Cera Cejas</h3>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cera%20Cejas%20($12)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-2.5 rounded-lg uppercase tracking-wider text-xs font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- Cera Media Pierna -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="Cera/Cera media pierna $30.jpg" alt="Cera Media Pierna" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$30</div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg font-serif font-bold text-white mb-4 flex-grow">Cera Media Pierna</h3>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20Cera%20Media%20Pierna%20($30)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-2.5 rounded-lg uppercase tracking-wider text-xs font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN LIMPIEZA FACIAL -->
+        <div id="limpieza" class="mb-20 pt-10">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 border-l-4 border-gold-500 pl-4">Limpieza Facial</h2>
+            <p class="text-gray-400 mb-8 pl-5">Revitaliza y renueva la piel de tu rostro.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- IMG_6454 -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Limpieza facial $130/IMG_6454.JPG" alt="Limpieza Facial Profunda" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$130.000</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Limpieza Facial Completa</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Eliminación de impurezas y cuidado profundo.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20una%20Limpieza%20Facial%20($130.000)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+
+                <!-- IMG_6455 -->
+                <div class="service-card bg-card rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Limpieza facial $130/IMG_6455.JPG" alt="Limpieza Facial" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">$130.000</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-white mb-2">Tratamiento Facial</h3>
+                        <p class="text-gray-400 text-sm mb-4 flex-grow">Recupera la luminosidad y frescura natural.</p>
+                        <a href="https://wa.me/573209786828?text=Hola,%20quiero%20agendar%20un%20Tratamiento%20Facial%20($130.000)" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Footer -->
     <footer class="bg-black border-t border-gray-900 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="font-serif text-2xl gold-gradient-text font-bold mb-6">PAO CABRERA</h3>
             <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://www.instagram.com/paocabrera_beauxcilscali/" target="_blank" class="text-gray-400 hover:text-gold-500 transition-colors text-2xl">
+                <a href="https://www.instagram.com/paocabrera_beauxcilscali/" target="_blank" class="text-gray-400 hover:text-gold-500 transition-colors text-3xl">
                     <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors text-2xl">
-                    <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
             <p class="text-gray-500 text-sm">
@@ -233,6 +381,11 @@
             </p>
         </div>
     </footer>
+
+    <!-- Botón Flotante General de WhatsApp -->
+    <a href="https://wa.me/573209786828?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios" class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
