@@ -1,276 +1,236 @@
-
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pao Cabrera Beaux Cils Cali | Especialistas en Pestañas y Cejas</title>
-    <meta name="description" content="Reserva tu cita en Pao Cabrera Beaux Cils Cali. Especialistas en extensiones de pestañas, lifting y diseño de cejas. Luce una mirada perfecta.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome para Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS CDN -->
+    <title>Pao Cabrera | Beaux Cils Cali</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         gold: {
-                            400: '#FFD700', // Dorado brillante
-                            500: '#D4AF37', // Dorado clásico (Gold Leaf)
-                            600: '#B5952F', // Dorado oscuro
+                            400: '#F1C40F',
+                            500: '#D4AF37', // Dorado clásico
+                            600: '#AA8C2C',
                         },
-                        black: '#0A0A0A', // Negro profundo
-                        gray: {
-                            900: '#121212',
-                            800: '#1E1E1E',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        dark: '#0a0a0a',
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Estilos personalizados adicionales para toques premium */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        h1, h2, h3, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+
         .gold-gradient-text {
-            background: linear-gradient(to right, #D4AF37, #FFD700, #D4AF37);
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        .hero-bg {
-            background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1512496015851-a91fb38ba79b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+
+        .gold-border {
+            border: 1px solid #D4AF37;
         }
+
         .btn-gold {
+            background: linear-gradient(to right, #D4AF37, #AA8C2C);
+            color: white;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
+
         .btn-gold:hover {
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(to right, #F1C40F, #D4AF37);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Efecto hover en las tarjetas de servicio */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+            border-color: #D4AF37;
+        }
+        .service-card:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="bg-black text-white font-sans antialiased">
+<body class="antialiased selection:bg-gold-500 selection:text-white">
 
-    <!-- Header / Navbar -->
-    <header class="fixed w-full z-50 top-0 bg-black/90 backdrop-blur-md border-b border-gold-500/20">
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur border-b border-gold-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white">PAO CABRERA</span>
-                    <span class="ml-2 font-serif text-sm font-normal text-gold-500 hidden sm:block">| BEAUX CILS</span>
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl gold-gradient-text font-bold">PAO CABRERA</span>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#servicios" class="text-gray-300 hover:text-gold-500 transition-colors font-light text-sm uppercase tracking-widest">Servicios</a>
-                    <a href="#experiencia" class="text-gray-300 hover:text-gold-500 transition-colors font-light text-sm uppercase tracking-widest">Experiencia</a>
-                </nav>
-
-                <!-- CTA Button -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm">Inicio</a>
+                    <a href="#catalogo" class="text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm">Catálogo</a>
+                </div>
                 <div class="flex items-center">
-                    <a href="#reserva" class="btn-gold bg-gold-500 hover:bg-gold-400 text-black font-medium py-2 px-6 rounded-none text-sm uppercase tracking-wider">
-                        Agendar Cita
+                    <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20cita" target="_blank" class="btn-gold px-6 py-2 rounded-full uppercase tracking-wider text-sm font-semibold flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Reservar
                     </a>
                 </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg relative min-h-screen flex items-center justify-center pt-20">
-        <div class="absolute inset-0 bg-black/40"></div> <!-- Overlay extra para contraste -->
-        
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="block text-gold-500 font-serif italic text-xl md:text-2xl mb-4">Arte & Belleza en tu mirada</span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
-                Realza tu Mirada con <br />
-                <span class="gold-gradient-text">Elegancia y Perfección</span>
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <!-- Puedes poner una imagen de fondo general de tu local o de tu trabajo aquí -->
+            <img src="https://images.unsplash.com/photo-1600869009498-8d429f88d4f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Studio" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-gold-500 tracking-[0.3em] uppercase text-sm font-semibold mb-4">Beaux Cils Cali</h2>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-white leading-tight">
+                Realza tu belleza <br>
+                <span class="gold-gradient-text">natural</span>
             </h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-10">
-                Especialistas en extensiones de pestañas y diseño de cejas en Cali. Descubre la mejor versión de ti con técnicas de vanguardia y productos premium.
+            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
+                Especialistas en la mirada y cuidado facial. Descubre nuestro catálogo exclusivo y reserva tu espacio.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#reserva" class="btn-gold w-full sm:w-auto bg-gold-500 hover:bg-gold-400 text-black font-semibold py-4 px-10 rounded-none text-lg uppercase tracking-wider text-center">
-                    Reserva tu Cita Hoy
-                </a>
-                <a href="#servicios" class="w-full sm:w-auto border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black transition-colors font-medium py-4 px-10 rounded-none text-lg uppercase tracking-wider text-center">
-                    Ver Servicios
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#catalogo" class="btn-gold px-8 py-4 rounded-full uppercase tracking-wider text-sm font-bold">
+                    Ver Catálogo
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicios" class="py-24 bg-gray-900">
+    <!-- Sección Catálogo de Servicios -->
+    <section id="catalogo" class="py-20 bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Nuestros <span class="text-gold-500">Servicios</span></h2>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Nuestro <span class="gold-gradient-text">Catálogo</span></h2>
                 <div class="w-24 h-1 bg-gold-500 mx-auto"></div>
-                <p class="mt-6 text-gray-400 font-light max-w-2xl mx-auto">Procedimientos diseñados para resaltar tu belleza natural con los más altos estándares de calidad y cuidado.</p>
+                <p class="mt-4 text-gray-400">Selecciona el servicio y agenda tu cita directamente</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Service 1 -->
-                <div class="bg-black border border-gray-800 hover:border-gold-500/50 transition-colors p-8 group flex flex-col h-full">
-                    <div class="text-gold-500 text-4xl mb-6 flex justify-center">
-                        <i class="fa-solid fa-eye"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Pestañas -->
+                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- RUTA DE TU IMAGEN: Cambia src por "Pestañas/nombre-de-tu-foto.jpg" -->
+                        <img src="Pestañas/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1512496015851-a1cbfc38a0f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Pestañas" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-black/70 backdrop-blur text-gold-500 px-3 py-1 rounded-full text-sm border border-gold-500/50">
+                            Más solicitado
+                        </div>
                     </div>
-                    <h3 class="text-xl font-serif font-semibold text-center mb-4 group-hover:text-gold-400 transition-colors">Extensiones de Pestañas</h3>
-                    <p class="text-gray-400 text-sm font-light text-center flex-grow mb-6">
-                        Técnicas Clásicas, Híbridas, Volumen y Mega Volumen. Aplicación pelo a pelo para un look desde natural hasta dramático, cuidando siempre tu pestaña natural.
-                    </p>
-                    <a href="#reserva" class="text-gold-500 text-sm uppercase tracking-wider text-center font-medium hover:text-white transition-colors">Agendar <i class="fa-solid fa-arrow-right ml-1"></i></a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-black border border-gray-800 hover:border-gold-500/50 transition-colors p-8 group flex flex-col h-full relative">
-                    <div class="absolute top-0 right-0 bg-gold-500 text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">Popular</div>
-                    <div class="text-gold-500 text-4xl mb-6 flex justify-center">
-                        <i class="fa-solid fa-leaf"></i>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Pestañas</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">Extensiones de pestañas pelo a pelo, volumen ruso y lifting para una mirada de impacto.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Pestañas" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
+                            Reservar Pestañas
+                        </a>
                     </div>
-                    <h3 class="text-xl font-serif font-semibold text-center mb-4 group-hover:text-gold-400 transition-colors">Lifting de Pestañas</h3>
-                    <p class="text-gray-400 text-sm font-light text-center flex-grow mb-6">
-                        Eleva y curva tus pestañas naturales desde la raíz. Incluye tinte y botox para una mirada expresiva sin necesidad de extensiones ni maquillaje diario.
-                    </p>
-                    <a href="#reserva" class="text-gold-500 text-sm uppercase tracking-wider text-center font-medium hover:text-white transition-colors">Agendar <i class="fa-solid fa-arrow-right ml-1"></i></a>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-black border border-gray-800 hover:border-gold-500/50 transition-colors p-8 group flex flex-col h-full">
-                    <div class="text-gold-500 text-4xl mb-6 flex justify-center">
-                        <i class="fa-solid fa-paintbrush"></i>
+                <!-- 2. Cejas -->
+                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- RUTA DE TU IMAGEN: Cambia src por "Cejas/nombre-de-tu-foto.jpg" -->
+                        <img src="Cejas/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1512495962227-2c1c73ec8bdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Cejas" class="w-full h-full object-cover transition-transform duration-700">
                     </div>
-                    <h3 class="text-xl font-serif font-semibold text-center mb-4 group-hover:text-gold-400 transition-colors">Diseño de Cejas</h3>
-                    <p class="text-gray-400 text-sm font-light text-center flex-grow mb-6">
-                        Arquitectura de mirada, laminado (Brow Lamination), depilación con hilo o cera y pigmentación para enmarcar tu rostro a la perfección.
-                    </p>
-                    <a href="#reserva" class="text-gold-500 text-sm uppercase tracking-wider text-center font-medium hover:text-white transition-colors">Agendar <i class="fa-solid fa-arrow-right ml-1"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us / Trust Section -->
-    <section id="experiencia" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                
-                <div class="w-full lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Experiencia Pao Cabrera" class="w-full h-auto rounded-none border-l-4 border-b-4 border-gold-500 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Cejas</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">Diseño, perfilado, sombreado y laminado de cejas. Enmarca tu rostro con perfección.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Cejas" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
+                            Reservar Cejas
+                        </a>
+                    </div>
                 </div>
 
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Por qué elegir <br/><span class="text-gold-500">Pao Cabrera</span></h2>
-                    <p class="text-gray-400 font-light mb-8 text-lg">
-                        Nuestra prioridad es tu satisfacción y la salud de tus pestañas y cejas. Combinamos técnica impecable con un ambiente de relajación total.
-                    </p>
-                    
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500">
-                                    <i class="fa-solid fa-check text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white font-serif">Atención Premium y Personalizada</h4>
-                                <p class="mt-1 text-sm text-gray-400 font-light">Evaluamos tus facciones y estado natural para recomendarte el estilo perfecto que resalte tu belleza única.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500">
-                                    <i class="fa-solid fa-shield-halved text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white font-serif">Insumos de Alta Gama</h4>
-                                <p class="mt-1 text-sm text-gray-400 font-light">Utilizamos exclusivamente productos certificados e hipoalergénicos para garantizar retención y cuidar tu salud.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500">
-                                    <i class="fa-solid fa-star text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-medium text-white font-serif">Resultados Impecables</h4>
-                                <p class="mt-1 text-sm text-gray-400 font-light">Cientos de clientas felices en Cali avalan nuestro trabajo minucioso y dedicación en cada set de pestañas.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <!-- 3. Limpieza Facial -->
+                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- RUTA DE TU IMAGEN: Cambia src por "Limpieza facial $130/nombre-de-tu-foto.jpg" -->
+                        <img src="Limpieza facial $130/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Limpieza Facial" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-gold-500 text-white font-bold px-4 py-1.5 rounded-lg shadow-lg">
+                            $130.000
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Limpieza Facial</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">Tratamiento profundo para revitalizar tu piel, eliminar impurezas y recuperar la luminosidad.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20la%20Limpieza%20Facial%20de%20$130" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
+                            Reservar Limpieza
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Labios -->
+                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- RUTA DE TU IMAGEN: Cambia src por "Labios/nombre-de-tu-foto.jpg" -->
+                        <img src="Labios/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1596704017254-9b121068fb31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Labios" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Labios</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">Micropigmentación, neutralización e hidratación profunda para unos labios perfectos.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20para%20Labios" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
+                            Reservar Labios
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Cera -->
+                <div class="service-card bg-[#111] rounded-2xl overflow-hidden border border-gray-800 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- RUTA DE TU IMAGEN: Cambia src por "Cera/nombre-de-tu-foto.jpg" -->
+                        <img src="Cera/portada.jpg" onerror="this.src='https://images.unsplash.com/photo-1559553156-2e97137af16f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'" alt="Cera" class="w-full h-full object-cover transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-serif font-bold text-white mb-2">Cera</h3>
+                        <p class="text-gray-400 text-sm mb-6 flex-grow">Depilación con cera profesional, cuidado delicado para una piel suave y sin vello.</p>
+                        <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20agendar%20un%20servicio%20de%20Depilación%20con%20Cera" target="_blank" class="w-full block text-center border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white py-3 rounded-lg uppercase tracking-wider text-sm font-semibold transition-colors">
+                            Reservar Cera
+                        </a>
+                    </div>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Final / Booking Section -->
-    <section id="reserva" class="py-20 bg-gold-500">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-serif font-bold text-black mb-6">¿Lista para transformar tu mirada?</h2>
-            <p class="text-black/80 font-medium mb-10 max-w-2xl mx-auto text-lg">
-                La agenda se llena rápido. Asegura tu espacio y déjate consentir en manos de expertas.
-            </p>
-            <!-- El botón idealmente llevaría al WhatsApp o sistema de reservas del cliente -->
-            <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-black hover:bg-gray-900 text-white font-bold py-4 px-12 text-lg uppercase tracking-wider transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-black/50">
-                <i class="fa-brands fa-whatsapp text-2xl mr-3 text-gold-500"></i>
-                Agendar Vía WhatsApp
-            </a>
-            <p class="mt-6 text-sm text-black/70 font-medium">* Respuesta rápida garantizada de Lunes a Sábado.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black pt-16 pb-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center justify-center">
-                <!-- Brand -->
-                <div class="text-center mb-8">
-                    <span class="font-serif text-3xl font-bold tracking-widest text-white">PAO CABRERA</span>
-                    <p class="text-gold-500 font-serif italic mt-2">Beaux Cils Cali</p>
-                </div>
-                
-                <!-- Instagram Link -->
-                <div class="mb-10">
-                    <a href="https://www.instagram.com/paocabrera_beauxcilscali/" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center">
-                        <div class="w-16 h-16 rounded-full border-2 border-gold-500 flex items-center justify-center text-white group-hover:bg-gold-500 group-hover:text-black transition-all duration-300 mb-3">
-                            <i class="fa-brands fa-instagram text-2xl"></i>
-                        </div>
-                        <span class="text-gray-400 text-sm font-light tracking-widest uppercase group-hover:text-gold-500 transition-colors">Síguenos en Instagram</span>
-                        <span class="text-gold-500 text-sm font-medium mt-1">@paocabrera_beauxcilscali</span>
-                    </a>
-                </div>
-
-                <!-- Copyright -->
-                <div class="w-full border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-500 text-xs font-light mb-4 md:mb-0">
-                        &copy; 2026 Pao Cabrera Beaux Cils. Todos los derechos reservados.
-                    </p>
-                    <p class="text-gray-600 text-xs font-light">
-                        Diseñado para la elegancia.
-                    </p>
-                </div>
+    <footer class="bg-black border-t border-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="font-serif text-2xl gold-gradient-text font-bold mb-6">PAO CABRERA</h3>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.instagram.com/paocabrera_beauxcilscali/" target="_blank" class="text-gray-400 hover:text-gold-500 transition-colors text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gold-500 transition-colors text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2026 Pao Cabrera Beaux Cils Cali. Todos los derechos reservados.<br>
+                Cali, Colombia
+            </p>
         </div>
     </footer>
 
