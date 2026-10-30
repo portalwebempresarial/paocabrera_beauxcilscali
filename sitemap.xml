@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>1.0</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/cejas-con-henna-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/depilacion-cera-axilas-cali.webp</image:loc></image:image>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/extensiones-de-pestanas-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/extensiones-pestanas-clasicas-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/extensiones-pestanas-hibridas-cali.webp</image:loc></image:image>
@@ -34,44 +34,94 @@
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/lifting-de-pestanas-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/lifting-de-pestanas-cali.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/micropigmentacion-de-cejas-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/cejas-con-henna-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/micropigmentacion-de-cejas-cali.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/micropigmentacion-de-labios-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/hidra-lips-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/micropigmentacion-de-labios-cali.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/limpieza-facial-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/limpieza-facial-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/limpieza-facial-profunda-cali.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/sueroterapia-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/sueroterapia-cali.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/depilacion-con-cera-cali.html</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/depilacion-cera-axilas-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/depilacion-cera-bozo-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/depilacion-cera-cejas-cali.webp</image:loc></image:image>
     <image:image><image:loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/img/depilacion-cera-media-pierna-cali.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-tipos-de-extensiones-de-pestanas.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-cuidados-extensiones-de-pestanas.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-que-es-el-lifting-de-pestanas.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-micropigmentacion-de-cejas-cuanto-dura.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-cejas-con-henna-vs-micropigmentacion.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-micropigmentacion-de-labios-cicatrizacion.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-limpieza-facial-profunda-beneficios.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-sueroterapia-que-es-para-que-sirve.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://portalwebempresarial.github.io/paocabrera_beauxcilscali/blog-depilacion-con-cera-primera-vez.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
